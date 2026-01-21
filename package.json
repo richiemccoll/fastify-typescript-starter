@@ -1,0 +1,36 @@
+{
+  "name": "fastify-typescript-starter",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch -r dotenv/config src/server.ts",
+    "test": "LOG_LEVEL=error node --test src/**/*.test.ts",
+    "lint": "biome lint src",
+    "lint:fix": "biome format src --write",
+    "build": "rimraf dist && tsc && cp package*.json dist",
+    "docker:build": "docker build -t fastify-typescript-starter .",
+    "docker:start": "docker run -p 8080:8080 fastify-typescript-starter"
+  },
+  "author": "Richie McColl",
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.11",
+    "node-test-junit-reporter": "^2.0.1",
+    "pino-pretty": "^13.1.3",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/node": "^25.0.3",
+    "close-with-grace": "^2.4.0",
+    "dotenv": "^17.2.3",
+    "fastify": "^5.6.2",
+    "fastify-plugin": "^5.1.0",
+    "@fastify/swagger": "^9.6.1",
+    "@fastify/swagger-ui": "^5.2.4",
+    "@fastify/type-provider-typebox": "^6.1.0",
+    "@sinclair/typebox": "^0.34.47",
+    "env-schema": "^7.0.0"
+  }
+}
