@@ -22,7 +22,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@types/node": "^25.0.3",
+    "@types/node": "^25.0.9",
     "close-with-grace": "^2.4.0",
     "dotenv": "^17.2.3",
     "fastify": "^5.7.1",
