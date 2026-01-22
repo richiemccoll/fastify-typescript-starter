@@ -10,27 +10,29 @@
     "lint:fix": "biome format src --write",
     "build": "rimraf dist && tsc && cp package*.json dist",
     "docker:build": "docker build -t fastify-typescript-starter .",
-    "docker:start": "docker run -p 8080:8080 fastify-typescript-starter"
+    "docker:start": "docker run -p 8080:8080 fastify-typescript-starter",
+    "prepare": "husky"
   },
   "author": "Richie McColl",
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^2.3.11",
+    "husky": "^9.1.7",
     "node-test-junit-reporter": "^2.0.1",
     "pino-pretty": "^13.1.3",
     "rimraf": "^6.1.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@types/node": "^25.0.9",
-    "close-with-grace": "^2.4.0",
-    "dotenv": "^17.2.3",
-    "fastify": "^5.7.1",
-    "fastify-plugin": "^5.1.0",
     "@fastify/swagger": "^9.6.1",
     "@fastify/swagger-ui": "^5.2.4",
     "@fastify/type-provider-typebox": "^6.1.0",
     "@sinclair/typebox": "^0.34.47",
-    "env-schema": "^7.0.0"
+    "@types/node": "^25.0.9",
+    "close-with-grace": "^2.4.0",
+    "dotenv": "^17.2.3",
+    "env-schema": "^7.0.0",
+    "fastify": "^5.7.1",
+    "fastify-plugin": "^5.1.0"
   }
 }

@@ -9,7 +9,7 @@ WORKDIR /app
 ############################
 FROM base AS deps
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --ignore-scripts
 
 ############################
 # Build (TS/JS)
@@ -27,7 +27,7 @@ RUN npm run build --if-present
 FROM base AS prod-deps
 ENV NODE_ENV=production
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci --omit=dev --ignore-scripts
 
 # Runtime
 FROM node:22-alpine AS runner
