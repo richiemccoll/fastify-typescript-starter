@@ -6,8 +6,8 @@ This repo provides a template for building Fastify-based Node.js (v24) applicati
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (version `22.15.0` recommended, see `.nvmrc`)
-- [Docker](https://www.docker.com/) (optional, for containerized deployment)
+- [Node.js](https://nodejs.org/) (version `24.x.x` recommended, see `.nvmrc`)
+- [Docker](https://www.docker.com/) (optional)
 
 ### Development
 

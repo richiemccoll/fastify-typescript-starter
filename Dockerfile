@@ -16,7 +16,7 @@ RUN npm ci --ignore-scripts
 ############################
 FROM base AS build
 ENV NODE_ENV=development
-# Use cached deps from previous stage (no BuildKit needed)
+# Use cached deps from previous stage
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build --if-present
@@ -30,7 +30,7 @@ COPY package*.json ./
 RUN npm ci --omit=dev --ignore-scripts
 
 # Runtime
-FROM node:22-alpine AS runner
+FROM node:24.12.0-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=prod-deps /app/node_modules ./node_modules
