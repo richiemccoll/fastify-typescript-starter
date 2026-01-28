@@ -28,7 +28,7 @@
     "@fastify/swagger-ui": "^5.2.4",
     "@fastify/type-provider-typebox": "^6.1.0",
     "@sinclair/typebox": "^0.34.47",
-    "@types/node": "^25.0.9",
+    "@types/node": "^25.0.10",
     "close-with-grace": "^2.4.0",
     "dotenv": "^17.2.3",
     "env-schema": "^7.0.0",
