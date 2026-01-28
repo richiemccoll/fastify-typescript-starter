@@ -32,7 +32,7 @@
     "close-with-grace": "^2.4.0",
     "dotenv": "^17.2.3",
     "env-schema": "^7.0.0",
-    "fastify": "^5.7.1",
+    "fastify": "^5.7.2",
     "fastify-plugin": "^5.1.0"
   }
 }
